@@ -1,16 +1,16 @@
 from repositories.reports_repository import ReportsRepository
 
 
-class ReportsController:
+class ReportsController():
     def __init__(self):
         self.reports_repository = ReportsRepository()
 
     def get_sorted_candidato(self) -> list:
-        print("Get candidatos from all mesas sorted desc by the enrollments amount.")
+        print("Candidatos por mesa ordenado por inscritos")
         return self.reports_repository.get_sorted_candidato()
 
     def get_sorted_candidato_by_mesa(self, mesa_id: str) -> list:
-        print("Get sorted candidatos from a given mesa.")
+        print("Candidatos por mesa determinada")
         return self.reports_repository.get_sorted_candidato_by_mesa(mesa_id)
 
     def get_sorted_partido(self) -> list:
